@@ -1,0 +1,51 @@
+
+/* Top & Bottom Borders and Padding*/
+header {
+    border-top: 5px solid #222222;
+    padding: 0px 100px;
+}
+
+article {
+    border-bottom: 5px solid #222222;
+    padding: 0px 100px;
+}
+
+/* Text & Link Styling*/
+body {
+    background: #f6f6f6;
+    color: #05080C;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: sans-serif;
+}
+
+p {
+    font-family: Georgia,Times,'Times New Roman',serif;
+}
+
+.white-link {
+    color:white;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Table Styling*/
+th {
+    background: #222;
+    color: white;
+    padding: 10px;
+  }
+  
+td {
+    background: #eee;
+    padding: 10px;
+}
+
+/* Image Style */
+img {
+    float: right;
+    margin: 20px;
+}
