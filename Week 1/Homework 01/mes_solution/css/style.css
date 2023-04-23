@@ -1,12 +1,12 @@
 
 /* Top & Bottom Borders and Padding*/
 header {
-    border-top: 5px solid #222222;
+    border-top: 3px solid #222222;
     padding: 0px 100px;
 }
 
 article {
-    border-bottom: 5px solid #222222;
+    border-bottom: 3px solid #222222;
     padding: 0px 100px;
 }
 
