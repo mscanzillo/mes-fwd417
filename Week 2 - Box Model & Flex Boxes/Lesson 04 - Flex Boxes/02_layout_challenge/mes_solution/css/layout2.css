@@ -4,17 +4,14 @@
 }
 
 .exerciseMain {
-    display: flex;
-    gap: 10px;
+
 }
 
 .exerciseMainContent {
-    width: 60%;
-    height:100px;
+
 
 }
 
 .exerciseMainAside {
-    width: 40%;
-    height:100px;
+
 }

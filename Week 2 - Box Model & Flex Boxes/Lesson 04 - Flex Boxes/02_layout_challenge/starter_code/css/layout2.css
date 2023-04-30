@@ -1,17 +1,26 @@
 
 .exerciseHeader, .exerciseFooter, .exerciseMain {
-    margin: 0 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
+
+}
+
+.exerciseHeader, .exerciseFooter {
+    height: 50px;
 }
 
 .exerciseMain {
+    display: flex;
+    gap: 10px;
+    height: 200px;
 
 }
 
 .exerciseMainContent {
-
+    flex:60%;
 
 }
 
 .exerciseMainAside {
-
+    flex:20%;
 }
+

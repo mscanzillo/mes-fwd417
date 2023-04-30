@@ -16,53 +16,41 @@ Use Flex-wrap, flex-direction, and flex to control how the header spaces and siz
 }
 
 .exerciseHeader {
-    display:flex;
-    justify-content: space-between;
+
 
 }
 
 .exerciseHeaderLogo {
     width: 200px;
     height: 80px;
-    margin: 10px;
 }
 
 
 .exerciseHeaderNav {
-    width: 600px;
-    display:flex;
-    justify-content: flex-end;
+
 }
 
 .exerciseHeaderNav ul {
-    display:flex;
-    justify-content: flex-end;
-    width:100%;
+
 }
 
 .exerciseHeaderNav ul li {
-    list-style: none;
-    margin:10px;
-    width:20%;
+
+
 }
 
 
 .exerciseMainContent {
-    margin-top:10px;
-    margin-bottom: 10px;
-    height: 200px;
+
 }
 
 
 .exerciseAdditionalFeatures {
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
 
 }
 
 .exerciseAdditionalFeatures .exerciseMarketingFeature {
-    width: 33%;
+
 
 }
 

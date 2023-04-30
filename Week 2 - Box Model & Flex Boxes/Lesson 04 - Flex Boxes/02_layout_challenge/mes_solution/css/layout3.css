@@ -4,34 +4,25 @@
 }
 
 .exerciseMainFeatures {
-    display:flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin:10px 0px;
-    height:100px;
+
 
 }
 
 .exerciseMainFeatures .exerciseMarketingFeature {
-    flex:50%;
+
 
 }
 
 .exerciseMainFeatures .exerciseMarketingFeature:first-child {
-    
+
 }
 
 .exerciseAdditionalFeatures {
-    display:flex;
-    justify-content: space-between;
-    margin: 10px 0px;
-    gap: 10px;
-    height:100px;
 
 }
 
 .exerciseAdditionalFeatures .exerciseMarketingFeature {
-    flex:33%;
+
 
 }
 
