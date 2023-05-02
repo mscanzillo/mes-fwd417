@@ -1,0 +1,10 @@
+
+/* Visible Box */
+
+.visibleBox {
+    background: teal;
+    min-height: 40px;
+    box-sizing: border-box;
+    color:white;
+    text-align: center;
+}

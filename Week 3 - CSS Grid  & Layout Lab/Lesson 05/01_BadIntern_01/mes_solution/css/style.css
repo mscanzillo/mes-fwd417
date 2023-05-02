@@ -36,6 +36,7 @@ body {
   font-weight: 300;
   background: rgb(245,238,230);
 }
+
 a {
   text-decoration: none;
 }
@@ -49,12 +50,14 @@ a {
 .outer-container {
   width: 960px;
   margin: 0 auto;
+  /*display:flex;
+  justify-content: space-between;*/
 }
 
 .primaryArticle {
   width: 640px;
   float: left;
-  margin-right: 20px;
+  margin-right: 0px;
   overflow:hidden;
 }
 
@@ -73,18 +76,17 @@ a {
 /* Core Styles
 /*******************************************/
 
-
 .oldTimeNewsPaper-corestyles p {
   font-size: 20px;
-  margin-bottom: 0;
+  margin-bottom: 20px;
 }
 
 .oldTimeNewsPaper-corestyles blockquote {
   font-size: 20px;
   margin-bottom: 20px;
   font-style: italic;
-  margin-left: 30px;
-  border-left: 8px solid black;
+  padding-left: 30px;
+  border-left: 1px solid black;
 }
 
 .oldTimeNewsPaper-corestyles p.featuredText {
@@ -170,11 +172,11 @@ a {
 }
 
 .oldTimeNewsPaper-corestyles-contentImage {
-  width: 100%;
+  max-width: 100%;
   border: 1px solid rgb(155,155,155);
   margin: 16px auto;
   display:block;
-  object-fit: cover;
+  align-self: center;
 }
 
 .oldTimeNewsPaper-corestyles-dateline {
