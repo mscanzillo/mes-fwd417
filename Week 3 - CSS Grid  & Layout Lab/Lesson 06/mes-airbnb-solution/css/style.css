@@ -1,6 +1,7 @@
 body {
   font-family: 'Nunito', Arial, sans-serif;
   font-size: 12px;
+  line-height: 1.15;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -21,3 +22,143 @@ h1, h2, h3, h4, h5, h6 {
 /* Fitzroy: https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/fitzroy.jpg */
 /* St. Kilda: https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/st-kilda.jpg  */
 /* CBD: https://s3-us-west-2.amazonaws.com/s.cdpn.io/2522641/central-business-district.jpg */
+
+/* Header + Nav Section */
+
+.abbPageHeader {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  justify-content: space-between;
+  align-items: center;
+  height:60px;
+}
+
+.abbPageHeader > div {
+
+}
+
+.abbPageHeader > nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.abbPageHeader ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  padding-right: 20px;
+}
+
+.abbPageHeader li {
+
+}
+
+.abbPageHeader li a, .abbPageHeader li a:visited {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0e0f0f;
+  padding:15px 10px;
+}
+
+.abbLogo img {
+  width:100px;
+  margin:10px;  
+}
+
+
+/* Hero Section */
+.abbHeroSection {
+  background-image: url("../images/melbourne.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.abbHeroSection > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.abbHeroSection h1 {
+  font-size: 64px;
+  margin:0;
+  padding:0;
+}
+
+.abbHeroSection p {
+  font-size: 16px;
+  margin:0;
+  padding:0;
+}
+
+.abbButtonStyle {
+  text-decoration: none;
+  background-color: #ff5358;
+  width: 250px;
+  padding: 15px 0px;
+  margin: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  border-radius: 3px;
+  border-bottom: 2px solid #e00007;
+}
+
+.abbButtonStyle:hover {
+  transition: 0.4s ease-in-out;
+  background-color: #e00007;
+}
+
+/* Locals Love/Complain */
+
+.abbLocals {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:20px;
+  background-color: #efefef;
+  padding: 30px 10px;
+}
+
+.abbLocals > div {
+  border: 1px solid #dbdbdb;
+}
+
+.abbLocals > div > h2 {
+  border-bottom: 1px solid #dbdbdb;
+  font-size: 12px;
+  padding: 12px 18px;
+}
+
+.abbLocals > div > div {
+  display:grid;
+  grid-template-columns: 1fr 4fr;
+  gap:5px;
+  background-color:white;
+  padding:10px;
+  font-size: 12px;
+}
+
+/* Featured Neighborhoods */
+
+.abbNeighbs {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.abbNeighbGallery {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
