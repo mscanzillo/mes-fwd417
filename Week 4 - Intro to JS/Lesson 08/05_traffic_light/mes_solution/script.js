@@ -12,7 +12,7 @@ function turnOffLights() {
 // Function to turn stop on
 function stopLight() {
    // turn off lights
-    turnOffLights
+    turnOffLights();
     // Turn on one of the lights
     document.getElementById("stopLight").classList.toggle("glow");
 }
@@ -20,7 +20,7 @@ function stopLight() {
 // Function to turn slow on
 function slowLight() {
     // turn off lights
-     turnOffLights()
+     turnOffLights();
      // Turn on one of the lights
      document.getElementById("slowLight").classList.toggle("glow");
  }
@@ -28,7 +28,7 @@ function slowLight() {
 // Function to turn go on
  function goLight() {
     // turn off lights
-     turnOffLights()
+     turnOffLights();
      // Turn on one of the lights
      document.getElementById("goLight").classList.toggle("glow");
  }
