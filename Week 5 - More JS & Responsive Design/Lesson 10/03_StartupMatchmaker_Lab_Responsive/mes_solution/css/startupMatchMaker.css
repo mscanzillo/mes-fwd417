@@ -115,12 +115,25 @@ a {
     overflow: hidden;
 }
 
-
-
-
 .copyright {
     font-family: 'Merriweather', serif;
     color: white;
     background-color: black;
     padding: 20px;
+}
+
+
+@media (min-width:769px) {
+    .responsiveTileGroup {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:10px;
+        border-right:1px solid grey;
+    }
+}
+
+@media (max-width:769px) {
+    .responsiveTileGroupItem {
+        border-bottom:1px solid grey;
+    }
 }

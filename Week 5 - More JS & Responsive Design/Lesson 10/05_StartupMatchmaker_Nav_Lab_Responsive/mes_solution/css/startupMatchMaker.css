@@ -41,6 +41,7 @@ a {
 
 }
 
+
 .logo {
     margin: 0;
     font-size: 32px;
@@ -62,6 +63,21 @@ a {
     display:flex;
     overflow:hidden;
 }
+
+/* @media (min-width: 960px){
+    .main-nav ul{
+        display: flex;
+    }
+} */
+
+@media (max-width: 800px) and (min-width: 640px) {
+    .site_header .contentContainer {
+        display: block;
+        /* flex-direction: row;  */
+    }
+}
+
+
 
 .main-nav li {
     margin-right: 20px;
@@ -89,10 +105,10 @@ a {
 
 
 
-// Create a media query that only applies when the screen is between 640px and 800px
+/* // Create a media query that only applies when the screen is between 640px and 800px
 
 
-// Create a media query that only applies when the screen is LESS than 640px
+// Create a media query that only applies when the screen is LESS than 640px */
 
 
 /* BODY LAYOUT */
@@ -144,4 +160,21 @@ a {
     color: white;
     background-color: black;
     padding: 20px;
+}
+
+@media (max-width: 640px){
+    .site_header .contentContainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-toggle, .nav-toggle:visited {
+        display:block;
+    }
+
 }

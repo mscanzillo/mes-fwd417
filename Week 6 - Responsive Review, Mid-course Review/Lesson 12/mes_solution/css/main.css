@@ -1,0 +1,326 @@
+/*
+ * Lay this page out - make it responsive, use grid, flex, position and media queries where needed.
+ *
+ * Colors-
+ * Green: #14a96d
+ * Dark Green: #14a96d
+ * White: #fff
+ * Light gray: #f4f5f6
+ * Border gray: #cfd7de
+ * Dark text: #1b1f23
+ * Lighter text: #66727c
+ * Blue for links: #06748a
+ * Blue for hovered links: #033641
+ */
+
+/* Globals */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cabin", sans-serif;
+  font-size: 18px;
+  color: #1b1f23;
+  margin:0;
+  height:auto;
+  display:block;
+  width:100%;
+  overflow-x:hidden;
+}
+
+.container_fixed {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: #033641;
+}
+
+
+.btn, .btn:visited {
+  background-color: #14a96d;
+  color: white; 
+  border-radius: 3px;
+  text-align: center;
+  padding: 20px;
+  display: block;
+}
+
+.btn:hover {
+  background-color: #0d784d;
+  color: white;
+}
+
+/* Site Header */
+
+.site_header_inner {
+  display: flex;
+  justify-content: space-between;
+  margin-top:10px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width:100%;
+}
+
+.navigation_first {
+  display:flex;
+  list-style: none;
+  justify-content: space-around;
+  align-content: flex-end;
+  gap:20px;
+}
+
+.sign_up {
+  display:flex;
+  list-style: none;
+  justify-content: space-around;
+  gap:20px;
+  
+}
+
+.burger {
+  display: none;
+}
+
+.logo img {
+  max-width: 180px;
+}
+
+@media (max-width: 1200px) {
+  .navigation {
+    display:none;
+  }
+
+  .burger {
+    display:flex;
+    padding-right: 30px;
+    align-items: center;
+    cursor: pointer;
+  }
+
+}
+
+
+/* Hero */
+
+.rover_hero_container {
+  background-image: url('../img/hero.jpg');
+  background-size: cover;
+  padding: 120px 0px;
+  color: #66737c;
+}
+
+.hero_callout {
+  max-width: 500px;
+}
+
+.hero_hdr {
+  font-size: 3rem;
+}
+
+.hero_tagline {
+  font-size: 2rem;
+  line-height: 135%;
+}
+
+.rover-cta-mobile {
+  display: none;
+}
+
+
+@media (min-width:200px) {
+  .btn_hero {
+    width:200px;
+  }
+}
+
+/* at medium sizes, there needs to be padding between the callout and the edge of the screen */
+@media (min-width:768px) and (max-width:1220px) {
+  .hero_callout {
+    padding-left:20px;
+  }
+}
+
+
+/* at tablet and smaller, turn the text box white */
+@media (min-width:768px) and (max-width:960px) {
+  .hero_callout {
+    background-color: white;
+    padding:20px;
+  }
+}
+
+/* at mobile sizes, get rid of the hero image, show alt images */
+@media (max-width:767px) {
+  
+  .rover_hero_container {
+    background: none;
+    padding: 0;
+  }
+
+  .hero_hdr {
+    display: none;
+  }
+
+  .hero_callout {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .hero_tagline {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .rover-mobile-hero-container {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .rover-mobile-hero-container img {
+    width:100%;
+  }
+
+}
+
+/* Middle facts */
+.rover_facts_2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.rover_facts_container ul {
+  margin: 0px;
+  padding:0;
+}
+
+
+.rover_facts_container li {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  list-style:none;
+  margin:0px;
+  padding:0;
+}
+
+.facts-text h2 {
+  margin-bottom: 0px;
+}
+
+.facts-text h2 + p {
+  margin-top: 0.5rem;
+}
+ 
+/* Rover Box */
+
+.rover_cta_box {
+  border: 1px solid #cfd7d3;
+  border-radius: 4px;
+}
+
+.rover_cta_header {
+  background-color: #f4f5f6;
+  padding:20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.rover_cta_header img {
+  width: 50px;
+}
+
+ul .rover_facts {
+  margin: 0;
+  padding: 0;
+}
+
+
+.rover_facts li {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.rover_facts .fas {
+  color: #14a96d;
+}
+
+.rover_cta_box_content {
+  padding:20px;
+}
+
+@media (max-width:767px) {
+
+  .facts_img img {
+    max-width: 4rem;
+  }
+
+  .facts-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .facts-text p {
+    font-size:1rem;
+  }
+
+  .rover_facts_2col {
+    grid-template-columns: 1fr;
+    padding:20px;
+  }
+}
+
+/* Quote */
+.rover_action_shot {
+  background: url("../img/lady-with-her-dogs.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding:150px 0;
+  margin-top:70px;
+}
+
+.rover_action_quote_container {
+  background-color: white;
+  padding:20px;
+  border: 1px solid #cfd7d3;
+  max-width: 500px;
+  margin-left: 100px;
+  margin-top: -170px;
+  font-size:2rem;
+  color: #66727c;
+}
+
+.rover_action_dash {
+  background-color: #14a96d;
+  width: 4rem;
+  height: 0.25rem;
+  margin-top: 1rem;
+}
+
+.rover_quote {
+  font-weight: bold;
+  color: black;
+}
+
+.rover_quote span {
+  color: #66727c;
+}
+
+.rover_action_quote_tagline {
+  font-size: 1.3rem;
+}
+
+/* TODO: 
+* hide/show navigation (via js)
+* need to finish the bottom of section "rover 1-2-3" 
+* ensure responsiveness is accounted for under services + collage of photo */

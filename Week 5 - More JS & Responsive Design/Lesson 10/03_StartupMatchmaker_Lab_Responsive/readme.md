@@ -9,11 +9,11 @@ You've been asked to build a member company list for Startup Matchmaker that is 
 
 
 ###Requirements
-* Add the viewport meta tag <meta name="viewport" content="width=device-width, initial-scale=1">
-* The maximum size of the content is 960px wide
-* The member companies should be displayed 2-across at desktop sizes and 1-across on tablet sizes and smaller (768px)
-* The member company logo should center and be above everything except the header at sizes below (and including)768px.
-* The width of the logo for smaller screens should never exceed 35%
+* Add the viewport meta tag <meta name="viewport" content="width=device-width, initial-scale=1"> (DONE)
+* The maximum size of the content is 960px wide (DONE)
+* The member companies should be displayed 2-across at desktop sizes and 1-across on tablet sizes and smaller (768px) (DONE)
+* The member company logo should center and be above everything except the header at sizes below (and including)768px.  (DONE)
+* The width of the logo for smaller screens should never exceed 35% (DONE)
 * Put a 1px solid grey border between each member company.  Adjust padding and margin as necessary
 * Re-balance the location and skills columns so that they are each half the width on tablet sizes
 

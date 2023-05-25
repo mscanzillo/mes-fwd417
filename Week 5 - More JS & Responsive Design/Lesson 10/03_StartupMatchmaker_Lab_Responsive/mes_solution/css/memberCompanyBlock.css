@@ -51,6 +51,7 @@
     overflow: hidden;
 }
 
+
 .memberCompanySkills h2, .memberCompanyLocation h2, .memberCompanyDesc h2 {
     text-transform: uppercase;
     color: rgb(30,50,100);
@@ -86,4 +87,26 @@
     overflow: hidden;
     clear: both;
     padding-top: 20px;
+}
+
+@media (max-width:768px) {
+    .memberCompanyLogoHaus {
+        display:flex;
+        width:100%;
+        flex-basis:100%;
+        justify-content:center;
+    }
+    .memberCompanyLogoHaus>img {
+        max-width:35%;
+    }
+    .memberCompanySkills, .memberCompanyLocation {
+        width:50%;
+        flex-basis:50%;
+    }
+}
+
+@media (max-width:769px) {
+    .memberCompany {
+        padding-bottom:10px;
+    }
 }
