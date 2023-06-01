@@ -52,6 +52,9 @@ for (let i = 0; i < snacks.length; i++) {
 
 // Bonus - use string interpolation or a "template string" to print your string to the console (google it)
 // Ex: `Notice the backticks instead of quotes. This is string interpolation syntax with a ${variable}`
+for (let i = 0; i < snacks.length; i++) {
+  console.log(`${i}. ${snacks[i]}`);
+}
 
 
 
