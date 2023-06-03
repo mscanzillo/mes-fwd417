@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
         let cityItem = document.createElement("option");
         // Set Properties
         cityItem.value = cities[i];
-        cityItem.innerText = cities[i];
         // Append Element
         document.querySelector("#city-type").append(cityItem);
     }
@@ -18,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     dropdown = document.querySelector('#city-type');
     dropdown.addEventListener('change', function(e) {
         let chosenCity = document.querySelector('#city-type').value;
+        // maybe this will work if the CSS classes are named the city values in the array
         document.body.setAttribute('class',`${chosenCity}`);
     });
 });
