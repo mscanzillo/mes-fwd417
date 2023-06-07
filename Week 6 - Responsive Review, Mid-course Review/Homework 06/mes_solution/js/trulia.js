@@ -6,7 +6,15 @@ let truliaCards = document.getElementsByClassName("trulia-grid-item");
 
 document.addEventListener('DOMContentLoaded', function(event) {
 
-// Toggle the navigation
+  // Toggle the navigation
+  hamburger = document.querySelector(".trulia-nav-toggle");
+
+  hamburger.addEventListener('click', function(event) {
+    navs = document.querySelectorAll(".trulia-nav ul");
+    for (let i = 0; i < navs.length; i++) {
+      navs[i].classList.toggle("trulia-nav-mobilehide");
+    }
+  });
 
 
 
@@ -24,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
 
-  });  
+});
 
 
 
