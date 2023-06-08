@@ -7,7 +7,7 @@ The Featured Item
 * Review the design mocks for the visual changes
 * You will likely need to adjust the sizes and ratios of the various parts of the trulia-grid-item when it is featured (**DONE - need help with the address styling, though**)
 * Create a script that attaches a click event to each trulia-grid-item that expands it to being featured AND removes featured from every other item (**DONE**)
-* There should be an animation for the transition (suggest making it short, such as 0.15s, and use an easing function)
+* There should be an animation for the transition (suggest making it short, such as 0.15s, and use an easing function) (**DONE**)
 * Add the code to the interactive-style. (**DONE**)
 * The user should have a visual queue that they can click on an trulia-grid-item. What is the usual behavior when the cursor hovers over links? (**DONE**)
 
@@ -18,10 +18,10 @@ The Grid: Responsive Issues (**DONE**)
 * At less than 768px, make it 2 across (**DONE**)
 
 The Header (**DONE**)
-* The header should show a hamburger at 1024px and below (** DONE **)
-* The navs should stack and display similar to the mock. (** DONE **)
-* Clicking on the hamburger should allow the menu to open and close (** DONE **)
-* There is a class on the UL's in the navigation called "trulia-nav-mobilehide".  Use it to show/hide the navigation (** DONE **)
+* The header should show a hamburger at 1024px and below (**DONE**)
+* The navs should stack and display similar to the mock. (**DONE**)
+* Clicking on the hamburger should allow the menu to open and close (**DONE**)
+* There is a class on the UL's in the navigation called "trulia-nav-mobilehide".  Use it to show/hide the navigation (**DONE**)
 
 
 
