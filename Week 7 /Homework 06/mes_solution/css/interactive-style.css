@@ -1,0 +1,127 @@
+/*Update Nav when at Mobile Sizes */
+@media screen and (max-width:1024px){
+    /* Show the hamburger, make sure logo and hamburger are spaced properly*/
+
+    .trulia-nav {
+        display:block;
+        height:auto;
+    }
+
+
+    .trulia-nav-toggle {
+        display:block;
+        color:white;
+        margin-right:20px;
+        font-size: 2em;
+    }
+
+    .trulia-nav ul li {
+        display:inline-block;
+        margin:0;
+    }
+
+    .trulia-nav-left, .trulia-nav-right {
+        display:flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .trulia-nav-left ul, 
+    .trulia-nav-right ul {
+        width:100%;
+        display:block;
+        margin:0;
+    }
+    
+    .trulia-nav-left ul li, 
+    .trulia-nav-right ul li {
+        display:block;
+        margin:0;
+        padding-bottom:5px;
+        margin-left:15px;
+    }
+
+    .trulia-nav-item {
+        display:block;
+    }
+    
+    /* Class to toggle the navigation on/off */
+    .trulia-nav-mobilehide {
+        display:none;
+        height:0;
+        width:0;
+        overflow:hidden;
+    }
+    
+}
+
+/* Responsiveness: Fix Grid at various screen sizes */
+
+@media screen and (min-width:1600px){
+    .trulia-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .trulia-grid {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width:768px){
+    .trulia-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* Interactivity: Featured and Expanded Item */
+.trulia-grid-item {
+    cursor:pointer;
+}
+
+.trulia-featured-grid-item {
+    grid-column:span 2;
+    grid-row:span 2;
+    height:100%;
+    min-height:375px;
+}
+
+.trulia-featured-grid-item .trulia-house-image {
+    height:75%;
+}
+
+.trulia-featured-grid-item .trulia-house-facts {
+    height:25%;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    margin-left:20px;
+    margin-right:20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trulia-featured-grid-item .trulia-house-stats {
+    font-size:1.5em;
+    font-weight:bold;
+
+}
+
+.trulia-featured-grid-item .trulia-house-price h1 {
+    font-size:2em;
+
+}
+
+
+/* Question: I think the font needs to be bigger for the address but I couldn't override the wrapping at a higher font size. I couldn't figure out how to get the address cell to span both columns in my grid. Not sure why the below didn't work. */
+
+.trulia-featured-grid-item .trulia-house-facts:nth-child(3) {
+    grid-column:span 2;
+}
+
+.trulia-featured-grid-item .trulia-house-address {
+    font-size:14px;
+    color:black;
+}

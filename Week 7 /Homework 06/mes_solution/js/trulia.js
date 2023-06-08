@@ -17,20 +17,21 @@ document.addEventListener('DOMContentLoaded', function(event) {
   });
 
 
+  // Loop through all the cards
+  for (let i=0; i < truliaCards.length; i++ ) {
 
-
-
-
-// Loop through all the cards
-    
-  // Add a click listener on each card
-      
-      // Remove the featured class
-
+    // Add a click listener on each card
+    truliaCards[i].addEventListener('click', function(event) {
+      // Remove the featured class from everyone 
+      for (let j=0; j < truliaCards.length; j++ ) {
+        truliaCards[j].classList.remove('trulia-featured-grid-item');
+      }
 
       // Add the featured class on the one clicked on
+      this.classList.add("trulia-featured-grid-item");
 
-
+    });
+  }
 
 });
 
