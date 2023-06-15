@@ -11,5 +11,10 @@ form {
 
 #giphy-results {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  margin:30px;
   /* CSS Bonus: Use flex or grid properties to display the results in a responsive, clean layout */
 }
