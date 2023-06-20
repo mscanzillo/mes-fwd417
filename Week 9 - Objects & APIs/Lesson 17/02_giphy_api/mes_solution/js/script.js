@@ -25,7 +25,7 @@ async function giphySearch(e) {
   const giphyJSON = await giphyResponse.json();
 
   // print your data to the console to see its format, dont forget to delete later
-  console.log(giphyJSON);
+  // console.log(giphyJSON);
 
   // clear out all gifs from previous searches
   document.querySelector('#giphy-results').innerHTML = "";

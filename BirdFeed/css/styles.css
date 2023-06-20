@@ -1,0 +1,144 @@
+/* Color Palette? 
+Primary Green: #008000
+Light Green: #66BB6A
+Dark Green: #2E7D32
+
+Sky Blue: #87CEEB
+Deep Blue: #1565C0
+Teal Blue: #039BE5
+
+Light Brown: #D7CCC8
+Dark Brown: #5D4037
+Beige: #ECEFF1
+*/
+
+body {
+  font-family: "Roboto";
+  background-color: #fff;
+  padding-top:100px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48;
+  padding:5px;
+}
+
+.navbar {
+  padding:10px 20px;
+  background-color: #008000;
+}
+
+/* TODO: how do I make the hamburger icon smaller?? */
+.tagline {
+  display: flex;
+  flex-direction: column;
+  align-content:center;
+  justify-content:center;
+  font-family: "Roboto", serif;
+  font-size: 12px;
+  background-color: #fff;
+  padding: 0px 10px; /*0px 20px 20px*/
+}
+
+.hero {
+  background-image: url("../images/charles-jackson-soHHiO7lsEk-unsplash.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  margin:0px;
+}
+
+/* Hero Text Block */
+.hero-block {
+  background-color: rgba(255, 255, 255, 0.781);
+  padding: 40px;
+  box-shadow: 0 0 3px #87CEEB;
+}
+
+.block-heading {
+  margin: 0;
+}
+
+.block-copy {
+  margin-top: 5px;
+}
+
+/* TODO: how do i make this align???*/
+.current-location {
+  align-content:center;
+  font-size:14px;
+}
+
+.location-icon {
+  width:12px;
+  height:12px;
+}
+
+/* Button Styling */
+.btn-hero {
+  background-color: #fff;
+  color:black;
+}
+
+.btn-block {
+  background-color: #fff;
+}
+
+.btn-primary {
+  font-size:12px;
+}
+
+/* Content Sections */
+
+/* Footer */
+.copyright {
+  font-family: "Roboto";
+  color: white;
+  background-color: #66BB6A;
+  font-size:8px;
+  padding: 20px;
+}
+
+.line-up {
+  position: relative;
+  top: 5px;
+}
+
+@media only screen and (max-width: 992px) {
+  .block {
+    border-right: none;
+    margin-bottom: 2em;
+  }
+
+  .navigation {
+    display: none;
+    width: auto;
+    float: none;
+  }
+
+  .showNav {
+    display: block;
+  }
+
+  .horizontal-nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .main-nav li {
+    margin-right: 0;
+  }
+
+  .main-nav strong {
+    text-transform: none;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: normal;
+  }
+}
