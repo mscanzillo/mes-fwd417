@@ -1,14 +1,7 @@
-/* Color Palette? 
-Primary Blue: #4B563E
-Light Green: #66BB6A
-
-Off white: #F9FAFC
-*/
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #F9FAFC;
   margin:0;
-  /* padding: 0 20px 0px 20px; */
 }
 
 /* Navigation Logic */
@@ -16,7 +9,6 @@ body {
 .navigation {
   padding-top:10px;
   background-color: #4B563E;
-  /* box-shadow: 0 0 5px #87CEEB; */
 }
 
 /* Brand + Tagline */
@@ -47,6 +39,7 @@ body {
   color:#F9FAFC;
 }
 
+/* Location + Dropdown */
 .current-location {
   display:flex;
   align-content:center;
@@ -115,7 +108,7 @@ body {
   margin-top: 5px;
 }
 
-
+/* Form fields */
 .species-form {
   display:flex;
   align-items: center;
