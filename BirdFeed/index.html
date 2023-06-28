@@ -3,69 +3,87 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- Site Meta, Favicon -->
         <title>BirdFeed</title>
         <meta name="description" content="Real-time, location-specific data for birders.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href='https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700' rel='stylesheet' type='text/css'>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+        <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet"> 
+
+        <!-- Dependencies (Bootstrap, FontAwesome, MapBox) -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
         <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <div class="container">
-            <!-- Site Header + Nav -->
-            <div class="">
-                <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-                    <!-- Tagline -->
+        <!-- Site Header + Nav -->
+        <div class="container-fluid">
+            <nav class="navigation row">
+                <!-- Tagline -->
+                <div class="logo-location-group col-12">
                     <div class="tagline">
-                        <a class="navbar-brand" href="#">BirdFeed</a>
-                        <span class="small-brand">Beak-ause Birds Are Amazing!</span>
+                        <a href="#"><strong><i class="fa-solid fa-feather"></i> BirdFeed</strong></a>
+                        <p>Beak-ause Birds Are Amazing!</p>
                     </div>
-                    <div class="current-location">
-                        <span class="material-symbols-outlined" style="height:12px; width:12px;">location_on</span>New York, NY
-                    </div>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#">Find a Species</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Hotspots</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">Events</a>
-                                </li>
-                            </ul>
+                    <div class="current-location navlink">
+                        <div class="navlink">
+                            <i class="fas fa-location-dot"></i> 
+                            <select name="cities" id="city-select">
+                                <!-- City Options go here, populated via JS -->
+                            </select>
                         </div>
-                </nav>
-            </div>
+                    </div>
+                </div>
+            </nav>
 
             <!-- Hero / Find a Species -->
             <section class ="row hero">
-                <div class="col-sm-5 offset-sm-7 hero-block">
-                    <h1 class="block-heading">Find a Species</h1>
-                    <p class="block-copy">Search recent sightings of a given species in your region.</p>
-                    <form id="species-form" class="cd-form">
-                        <input type="text" id="species-name" placeholder="Search...">
-                        <input type="submit"></input> 
+                <div class="col-md-6 offset-md-6 col-sm-8 offset-sm-4 hero-block row">
+                    <h2 class="block-heading col-12">Find a Species</h2>
+                    <p class="block-copy col-12">Look up recent sightings of a given species in your area.</p>
+                    <form id="species-form col-12" class="cd-form">
+                        <input list="local-species-input" class="species-input" placeholder="Start typing...">
+                        <datalist id="local-species-input">
+                            <!-- Species Options go here, populated via JS -->
+                        </datalist>
+                        <button class="my-primary-button" type="submit"><i class="fa-solid fa-binoculars"></i> Go</button> 
+                        <button class="my-secondary-button hide-element" type="submit"><i class="fa-solid fa-rotate"></i> Reset</button> 
                     </form>
                 </div>
             </section>
 
             <!-- Nearby Hotspots & Map-->
-            <section class ="row">
+            <section class ="row nearby-hotspots-notable-sightings">
                 <!-- Hotspots -->
-                <div class="col-md-6">
-                    <h1 class="">Nearby Hotspots</h1>
-                    <p class=""></p>
+                <div class="col-sm">
+                    <div class="hotspots-label"><i class="fa-solid fa-fire"></i> Nearby Hotspots</div>
+                    <div id='map'>
+                    
+                    </div>
                 </div>
-                <!-- Migration Map -->
-                <div class="col-md-6">
-                    <h1 class="">Migration Data</h1>
-                    <p class=""></p>
+                <!-- notable Sightings -->
+                <div class="col-sm">
+                    <div class="table-label"><i class="fa-solid fa-eye"></i> Notable Sightings</div>
+                    <div class="table-container">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                            <tr>
+                                <th scope="col">Species Name</th>
+                                <th scope="col">Location</th>
+                                <th scope="col">Number</th>
+                                <th scope="col">Last Observed</th>
+                            </tr>
+                            </thead>
+                            <tbody class="table-divider">
+                                <!-- This will be populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </section>
 
@@ -76,7 +94,9 @@
                 </footer>
             </div>
         </div>
+        <script src="js/init.js"></script>
         <script src="js/scripts.js"></script>
+        <!-- <script src="js/map.js"></script> -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     </body>
 </html>

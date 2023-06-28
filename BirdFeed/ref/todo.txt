@@ -1,0 +1,4 @@
+Future Improvements
+-- Define species dict from CSV response to https://{{serverName}}/{{contextRoot}}/ref/taxonomy/ebird
+-- Add better localization options (maybe zip code, instead of town name?)
+-- Add loading spinners while content is being populated
